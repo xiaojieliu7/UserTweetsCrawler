@@ -91,7 +91,7 @@ class TweetManager:
                     insertcount = 0
                     for t in temp_results:
                         tweet = {'_id': t.id,
-                                    'screen_name': t.username,
+                                    'screen_name': tweetCriteria.username,
                                     'date': t.date.strftime("%Y-%m-%d %H:%M"),
                                     'retweets': t.retweets,
                                     'favorites': t.favorites,
