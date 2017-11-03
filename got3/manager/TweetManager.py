@@ -132,8 +132,28 @@ class TweetManager:
         if receiveBuffer and len(resultsAux) > 0:
             receiveBuffer(resultsAux)
 
+        temp_results = results
         client = pymongo.MongoClient(mongourl)
         db = client.get_database('train_data')
+        collection = db.get_collection(category)
+        insertcount = 0
+        for t in temp_results:
+            tweet = {'_id': t.id,
+                     'screen_name': tweetCriteria.username,
+                     'date': t.date.strftime("%Y-%m-%d %H:%M"),
+                     'retweets': t.retweets,
+                     'favorites': t.favorites,
+                     'text': t.text,
+                     'geo': t.geo,
+                     'mentions': t.mentions,
+                     'hashtags': t.hashtags}
+            try:
+                collection.insert(tweet)
+                insertcount += 1
+            except Exception as e:
+                print(e)
+                continue
+
         collection = db.get_collection('log')
         resultlog = collection.find_one({'screen_name': tweetCriteria.username})
         if resultlog is None:

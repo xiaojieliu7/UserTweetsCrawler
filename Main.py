@@ -47,7 +47,7 @@ def parse(category, username):
     # Example 1 - Get tweets by username
     print('category:', category, '\tscreen_name:', username)
     tweetCriteria = got.manager.TweetCriteria().setUsername(username).setMaxTweets(-1)
-    tweets = got.manager.TweetManager.getTweets(category=category, tweetCriteria=tweetCriteria, proxy="127.0.0.1:1080")
+    tweets = got.manager.TweetManager.getTweets(category=category, tweetCriteria=tweetCriteria)
     # for tweet in tweets:
     #     printTweet("### Example 1 - Get tweets by username " + username, tweet)
 
