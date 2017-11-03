@@ -48,8 +48,8 @@ def parse(category, username):
     print('category:', category, '\tscreen_name:', username)
     tweetCriteria = got.manager.TweetCriteria().setUsername(username).setMaxTweets(-1)
     tweets = got.manager.TweetManager.getTweets(category=category, tweetCriteria=tweetCriteria, proxy="127.0.0.1:1080")
-    for tweet in tweets:
-        printTweet("### Example 1 - Get tweets by username " + username, tweet)
+    # for tweet in tweets:
+    #     printTweet("### Example 1 - Get tweets by username " + username, tweet)
 
         # Example 2 - Get tweets by query search
         # tweetCriteria = got.manager.TweetCriteria().setQuerySearch('europe refugees').setSince("2015-05-01").setUntil(
@@ -119,18 +119,19 @@ def initQueue(typeid):
     return userlist[typeid-1]['type']
 
 if __name__ == '__main__':
-    # parse(category, 'XiaojieLiu7')
     print('start at:', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
-    category = initQueue(int(sys.argv[1]))
-    threads = []
-    for i in range(16):
-        # 创建新线程
-        thread = myThread(i, "Thread-" + str(i), category)
-        threads.append(thread)
-        # 开启线程
-        thread.start()
+    parse('Religion', 'islamicfreedom')
 
-    for t in threads:
-        t.join()
+    # category = initQueue(int(sys.argv[1]))
+    # threads = []
+    # for i in range(16):
+    #     # 创建新线程
+    #     thread = myThread(i, "Thread-" + str(i), category)
+    #     threads.append(thread)
+    #     # 开启线程
+    #     thread.start()
+    #
+    # for t in threads:
+    #     t.join()
 
     print('end at:', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
