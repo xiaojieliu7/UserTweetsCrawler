@@ -183,6 +183,7 @@ class TweetManager:
         ]
 
         if proxy:
+            urllib.request.urlopen("https://www.baidu.com")
             opener = urllib.request.build_opener(urllib.request.ProxyHandler({'http': proxy, 'https': proxy}),
                                                  urllib.request.HTTPCookieProcessor(cookieJar))
         else:
@@ -193,7 +194,8 @@ class TweetManager:
                 response = opener.open(url)
                 jsonResponse = response.read()
                 break
-            except:
+            except Exception as e:
+                print(e)
                 # print("Twitter weird response. Try to see on browser: ", url)
                 print(
                     "Twitter weird response. Try to see on browser: https://twitter.com/search?q=%s&src=typd" % urllib.parse.quote(
