@@ -120,18 +120,18 @@ def initQueue(typeid):
 
 if __name__ == '__main__':
     print('start at:', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
-    parse('Religion', 'islamicfreedom')
+    # parse('Religion', 'islamicfreedom')
 
-    # category = initQueue(int(sys.argv[1]))
-    # threads = []
-    # for i in range(16):
-    #     # 创建新线程
-    #     thread = myThread(i, "Thread-" + str(i), category)
-    #     threads.append(thread)
-    #     # 开启线程
-    #     thread.start()
-    #
-    # for t in threads:
-    #     t.join()
+    category = initQueue(int(sys.argv[1]))
+    threads = []
+    for i in range(16):
+        # 创建新线程
+        thread = myThread(i, "Thread-" + str(i), category)
+        threads.append(thread)
+        # 开启线程
+        thread.start()
+
+    for t in threads:
+        t.join()
 
     print('end at:', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
