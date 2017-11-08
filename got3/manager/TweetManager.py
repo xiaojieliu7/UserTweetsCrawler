@@ -203,7 +203,7 @@ class TweetManager:
         ]
 
         if proxy:
-            urllib.request.urlopen("https://www.baidu.com")
+            # urllib.request.urlopen("https://www.baidu.com")
             opener = urllib.request.build_opener(urllib.request.ProxyHandler({'http': proxy, 'https': proxy}),
                                                  urllib.request.HTTPCookieProcessor(cookieJar))
         else:
