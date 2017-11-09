@@ -15,7 +15,7 @@ class TweetManager:
     def getTweets(category, tweetCriteria, receiveBuffer=None, bufferLength=100, proxy=None, mongourl='101.132.187.45:27017'):
         refreshCursor = ''
         client = pymongo.MongoClient(mongourl)
-        db = client.get_database('tweet')
+        db = client.get_database('train_data')
         collection = db.get_collection('log')
         resultlog = collection.find_one({'screen_name': tweetCriteria.username})
         if resultlog is not None:
@@ -82,6 +82,7 @@ class TweetManager:
                 results.append(tweet)
                 resultsAux.append(tweet)
 
+                collection = db.get_collection(category)
                 tweets_count += 1
                 if tweets_count % 100 == 0:
                     temp_results = results
@@ -129,6 +130,7 @@ class TweetManager:
         if receiveBuffer and len(resultsAux) > 0:
             receiveBuffer(resultsAux)
 
+        collection = db.get_collection(category)
         temp_results = results
         insertcount = 0
         for t in temp_results:
@@ -166,7 +168,7 @@ class TweetManager:
     def getNoiseTweets(category, tweetCriteria, receiveBuffer=None, bufferLength=100, proxy=None, mongourl='101.132.187.45:27017'):
         refreshCursor = ''
         client = pymongo.MongoClient(mongourl)
-        db = client.get_database('tweet')
+        db = client.get_database('train_data')
         collection = db.get_collection('noise_log')
         resultlog = collection.find_one({'until': tweetCriteria.until})
         if resultlog is not None:
@@ -233,13 +235,14 @@ class TweetManager:
                 results.append(tweet)
                 resultsAux.append(tweet)
 
+                collection = db.get_collection(category)
                 tweets_count += 1
-                if tweets_count % 100 == 0:
+                if tweets_count % 20 == 0:
                     temp_results = results
                     insertcount = 0
                     for t in temp_results:
                         tweet = {'_id': t.id,
-                                    'screen_name': tweetCriteria.username,
+                                    'screen_name': None,
                                     'date': t.date.strftime("%Y-%m-%d %H:%M"),
                                     'retweets': t.retweets,
                                     'favorites': t.favorites,
@@ -280,11 +283,12 @@ class TweetManager:
         if receiveBuffer and len(resultsAux) > 0:
             receiveBuffer(resultsAux)
 
+        collection = db.get_collection(category)
         temp_results = results
         insertcount = 0
         for t in temp_results:
             tweet = {'_id': t.id,
-                     'screen_name': tweetCriteria.username,
+                     'screen_name': None,
                      'date': t.date.strftime("%Y-%m-%d %H:%M"),
                      'retweets': t.retweets,
                      'favorites': t.favorites,
@@ -315,7 +319,7 @@ class TweetManager:
 
     @staticmethod
     def getJsonReponse(tweetCriteria, refreshCursor, cookieJar, proxy):
-        url = "https://twitter.com/i/search/timeline?f=tweets&q=%s&src=typd&%smax_position=%s"
+        url = "https://twitter.com/i/search/timeline?l=en&f=tweets&q=%s&src=typd&%smax_position=%s"
 
         urlGetData = ''
         if hasattr(tweetCriteria, 'username'):

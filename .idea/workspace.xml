@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="699d0879-6dec-4238-90c9-deb184fea73c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseNoise.py" />
+    <list default="true" id="699d0879-6dec-4238-90c9-deb184fea73c" name="Default" comment="noise parse">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseNoise.py" afterPath="$PROJECT_DIR$/ParseNoise.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/got3/manager/TweetManager.py" afterPath="$PROJECT_DIR$/got3/manager/TweetManager.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +19,8 @@
       <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="69" column="22" lean-forward="true" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+            <state relative-caret-position="255">
+              <caret line="56" column="63" lean-forward="true" selection-start-line="54" selection-start-column="60" selection-end-line="56" selection-end-column="63" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -31,8 +31,8 @@
       <file leaf-file-name="ParseNoise.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ParseNoise.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="172">
+              <caret line="102" column="21" lean-forward="false" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -63,11 +63,10 @@
       <file leaf-file-name="TweetManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/got3/manager/TweetManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="-1510">
+              <caret line="171" column="51" lean-forward="true" selection-start-line="171" selection-start-column="51" selection-end-line="171" selection-end-column="51" />
               <folding>
                 <element signature="e#0#140#0" expanded="true" />
-                <element signature="e#432#7009#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -112,6 +111,10 @@
       <find>Process finished</find>
       <find>rocess finished</find>
       <find>train_data</find>
+      <find>'screen_name':</find>
+      <find>noise_</find>
+      <find>get_collection</find>
+      <find>'tweet'</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -437,7 +440,21 @@
       <option name="project" value="LOCAL" />
       <updated>1510159961053</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="noise parse">
+      <created>1510199331742</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1510199331742</updated>
+    </task>
+    <task id="LOCAL-00011" summary="noise parse">
+      <created>1510202930060</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1510202930060</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -469,7 +486,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="code modify" />
-    <option name="LAST_COMMIT_MESSAGE" value="code modify" />
+    <MESSAGE value="noise parse" />
+    <option name="LAST_COMMIT_MESSAGE" value="noise parse" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -481,12 +499,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/got3/manager/TweetManager.py</url>
-          <line>117</line>
+          <line>118</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/got3/manager/TweetManager.py</url>
-          <line>152</line>
+          <line>154</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -496,7 +514,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/got3/manager/TweetManager.py</url>
-          <line>373</line>
+          <line>377</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -509,8 +527,13 @@
           <line>31</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/got3/manager/TweetManager.py</url>
+          <line>363</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="51" />
+      <option name="time" value="53" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -527,7 +550,6 @@
           <caret line="35" column="48" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
           <folding>
             <element signature="e#0#140#0" expanded="true" />
-            <element signature="e#432#7009#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -588,7 +610,6 @@
           <caret line="35" column="48" lean-forward="true" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
           <folding>
             <element signature="e#0#140#0" expanded="true" />
-            <element signature="e#432#7009#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -651,7 +672,6 @@
           <caret line="227" column="0" lean-forward="true" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
           <folding>
             <element signature="e#0#140#0" expanded="true" />
-            <element signature="e#432#7009#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -704,7 +724,6 @@
           <caret line="196" column="57" lean-forward="false" selection-start-line="196" selection-start-column="57" selection-end-line="196" selection-end-column="57" />
           <folding>
             <element signature="e#0#140#0" expanded="true" />
-            <element signature="e#432#7009#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -741,7 +760,6 @@
           <caret line="92" column="45" lean-forward="true" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
           <folding>
             <element signature="e#0#140#0" expanded="true" />
-            <element signature="e#432#7009#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -786,7 +804,6 @@
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="e#0#140#0" expanded="true" />
-            <element signature="e#432#7009#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -823,7 +840,6 @@
           <caret line="138" column="39" lean-forward="true" selection-start-line="138" selection-start-column="39" selection-end-line="138" selection-end-column="39" />
           <folding>
             <element signature="e#0#140#0" expanded="true" />
-            <element signature="e#432#7009#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -860,7 +876,6 @@
           <caret line="135" column="35" lean-forward="false" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
           <folding>
             <element signature="e#0#140#0" expanded="true" />
-            <element signature="e#432#7009#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -881,7 +896,6 @@
           <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding>
             <element signature="e#0#140#0" expanded="true" />
-            <element signature="e#432#7009#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -930,16 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="69" column="22" lean-forward="true" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Userlist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
@@ -956,21 +960,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="56" column="63" lean-forward="true" selection-start-line="54" selection-start-column="60" selection-end-line="56" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/got3/manager/TweetManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="-1510">
+          <caret line="171" column="51" lean-forward="true" selection-start-line="171" selection-start-column="51" selection-end-line="171" selection-end-column="51" />
           <folding>
             <element signature="e#0#140#0" expanded="true" />
-            <element signature="e#432#7009#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ParseNoise.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="172">
+          <caret line="102" column="21" lean-forward="false" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
