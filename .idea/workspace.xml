@@ -4,6 +4,7 @@
     <list default="true" id="699d0879-6dec-4238-90c9-deb184fea73c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseNoise.py" afterPath="$PROJECT_DIR$/ParseNoise.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/got3/manager/TweetManager.py" afterPath="$PROJECT_DIR$/got3/manager/TweetManager.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,8 +31,8 @@
       <file leaf-file-name="ParseNoise.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ParseNoise.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+            <state relative-caret-position="301">
+              <caret line="56" column="90" lean-forward="false" selection-start-line="56" selection-start-column="90" selection-end-line="56" selection-end-column="90" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -42,7 +43,7 @@
       <file leaf-file-name="Userlist.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Userlist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
+            <state relative-caret-position="265">
               <caret line="32" column="56" lean-forward="false" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
               <folding />
             </state>
@@ -62,8 +63,8 @@
       <file leaf-file-name="TweetManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/got3/manager/TweetManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3933">
-              <caret line="171" column="51" lean-forward="false" selection-start-line="171" selection-start-column="51" selection-end-line="171" selection-end-column="51" />
+            <state relative-caret-position="132">
+              <caret line="438" column="47" lean-forward="false" selection-start-line="438" selection-start-column="39" selection-end-line="438" selection-end-column="47" />
               <folding>
                 <element signature="e#0#140#0" expanded="true" />
               </folding>
@@ -114,6 +115,7 @@
       <find>noise_</find>
       <find>get_collection</find>
       <find>'tweet'</find>
+      <find>noise_log</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -460,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510210750410</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="parse agriculture">
+      <created>1510494870226</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1510494870226</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -494,7 +503,8 @@
     <MESSAGE value="code modify" />
     <MESSAGE value="noise parse" />
     <MESSAGE value="noise parse Other" />
-    <option name="LAST_COMMIT_MESSAGE" value="noise parse Other" />
+    <MESSAGE value="parse agriculture" />
+    <option name="LAST_COMMIT_MESSAGE" value="parse agriculture" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -521,7 +531,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/got3/manager/TweetManager.py</url>
-          <line>377</line>
+          <line>530</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -536,7 +546,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/got3/manager/TweetManager.py</url>
-          <line>363</line>
+          <line>516</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
@@ -951,14 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Userlist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="32" column="56" lean-forward="false" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/got3/manager/TweetCriteria.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -977,10 +979,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Userlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="32" column="56" lean-forward="false" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/got3/manager/TweetManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3933">
-          <caret line="171" column="51" lean-forward="false" selection-start-line="171" selection-start-column="51" selection-end-line="171" selection-end-column="51" />
+        <state relative-caret-position="132">
+          <caret line="438" column="47" lean-forward="false" selection-start-line="438" selection-start-column="39" selection-end-line="438" selection-end-column="47" />
           <folding>
             <element signature="e#0#140#0" expanded="true" />
           </folding>
@@ -989,8 +999,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ParseNoise.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+        <state relative-caret-position="301">
+          <caret line="56" column="90" lean-forward="false" selection-start-line="56" selection-start-column="90" selection-end-line="56" selection-end-column="90" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

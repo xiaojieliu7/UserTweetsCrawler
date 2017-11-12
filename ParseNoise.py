@@ -54,12 +54,12 @@ def parse(category, since, until):
     querystr = '#agriculture #farm #farmer #farming'
     # Example 2 - Get tweets by query search
     tweetCriteria = got.manager.TweetCriteria().setQuerySearch(querystr).setSince(since).setUntil(until).setMaxTweets(-1)
-    got.manager.TweetManager.getNoiseTweets(category=category, tweetCriteria=tweetCriteria, proxy="127.0.0.1:1080")
+    got.manager.TweetManager.getNoiseTweets(category=category, tweetCriteria=tweetCriteria)
 
 
 def initQueue():
     now = datetime.datetime.now()
-    for i in range(100):
+    for i in range(64):
         yesterday = now - datetime.timedelta(days=1)
         since = yesterday.strftime('%Y-%m-%d')
         until = now.strftime('%Y-%m-%d')
@@ -102,7 +102,7 @@ if __name__ == '__main__':
     threads = []
     for i in range(64):
         # 创建新线程
-        thread = myThread(i, "Thread-" + str(i), category='Other')
+        thread = myThread(i, "Thread-" + str(i), category='AgricultureHashtag')
         threads.append(thread)
         # 开启线程
         thread.start()
