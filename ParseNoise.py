@@ -51,7 +51,7 @@ def printTweet(descr, t):
 def parse(category, since, until):
     print('category:', category, '\t', since, '\t', until)
 
-    querystr = '-sport -entertainment -religion -military -politics -education -technology -economy -agriculture'
+    querystr = '#agriculture #farm #farmer #farming'
     # Example 2 - Get tweets by query search
     tweetCriteria = got.manager.TweetCriteria().setQuerySearch(querystr).setSince(since).setUntil(until).setMaxTweets(-1)
     got.manager.TweetManager.getNoiseTweets(category=category, tweetCriteria=tweetCriteria, proxy="127.0.0.1:1080")
