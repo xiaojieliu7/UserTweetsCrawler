@@ -120,18 +120,26 @@ def initQueue(typeid):
 
 if __name__ == '__main__':
     print('start at:', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
-    parse('Economy', 'EconomyWrld')
+    # parse('Economy', 'EconomyWrld')
 
     # category = initQueue(int(sys.argv[1]))
-    # threads = []
-    # for i in range(16):
-    #     # 创建新线程
-    #     thread = myThread(i, "Thread-" + str(i), category)
-    #     threads.append(thread)
-    #     # 开启线程
-    #     thread.start()
-    #
-    # for t in threads:
-    #     t.join()
+    category = "Technology"
+    userlist = ['Engadget', 'Engadget', 'cnntech', 'ReutersTech', 'techradar', 'nytimestech', 'Techmeme',
+                'mashabletech', 'usatodaytech', 'fttechnews', 'IBM']
+
+    category = "Education"
+    userlist = ['Education', 'GEMReport', 'GdnHigherEd', 'hgse', 'USNewsEducation', 'educationusa', 'edutopia']
+    for u in userlist:
+        users_queue.put(u)
+    threads = []
+    for i in range(16):
+        # 创建新线程
+        thread = myThread(i, "Thread-" + str(i), category)
+        threads.append(thread)
+        # 开启线程
+        thread.start()
+
+    for t in threads:
+        t.join()
 
     print('end at:', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
