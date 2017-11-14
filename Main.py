@@ -123,9 +123,8 @@ if __name__ == '__main__':
     # parse('Economy', 'EconomyWrld')
 
     # category = initQueue(int(sys.argv[1]))
-    category = "Technology"
-    userlist = ['Engadget', 'Engadget', 'cnntech', 'ReutersTech', 'techradar', 'nytimestech', 'Techmeme',
-                'mashabletech', 'usatodaytech', 'fttechnews', 'IBM']
+    #category = "Technology"
+    #userlist = ['Engadget', 'Engadget', 'cnntech', 'ReutersTech', 'techradar', 'nytimestech', 'Techmeme','mashabletech', 'usatodaytech', 'fttechnews', 'IBM']
 
     category = "Education"
     userlist = ['Education', 'GEMReport', 'GdnHigherEd', 'hgse', 'USNewsEducation', 'educationusa', 'edutopia']
