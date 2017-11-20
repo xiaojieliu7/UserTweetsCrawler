@@ -45,7 +45,9 @@ class MyThread(threading.Thread):  # 继承父类threading.Thread
 def tagtweets(screen_name):
     pattern = re.compile('https?://[^ ]*|RT @.*: |@.[^ ,]*[ ,]|&amp;|#[^ ]*', re.I)
     userinfo = db.typical.find_one({"screen_name": screen_name})
-    for i in range(len(userinfo['tweets'])):
+    tweets_count = len(userinfo['tweets'])
+    for i in range(tweets_count):
+        print(screen_name, ":\ttweet count: ", i, "/", tweets_count)
         tweet = userinfo['tweets'][i]
         language = tweet['lang']
         # 仅处理英语推文
@@ -66,7 +68,7 @@ def tagtweets(screen_name):
                 time.sleep(1)
                 continue
         if res.status_code == 200:
-            print(screen_name, ":\t", res.text)
+            # print(screen_name, ":\t", res.text)
             tagme_result = json.loads(res.text)
             for j in range(len(tagme_result['annotations'])):
                 pageid = tagme_result['annotations'][j]["id"]
