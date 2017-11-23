@@ -95,6 +95,13 @@ def get_users_category_center():
                     # 仅处理confidence score大于0.2的结果
                     if annotation["rho"] < 0.2:
                         continue
+                    # 判断类别列表是否为空
+                    cList = annotation["categories"]
+                    if len(cList) == 0:
+                        continue
+                    # 判断是否已经计算过权重
+                    if len(cList) > 0 and "score" in cList[0]:
+                        continue
                     # 计算中心类别，及各个类别的权重
                     centerCategory, wlist = get_center_category(annotation["categories"])
                     # print(centerCategory)
@@ -113,6 +120,6 @@ def get_users_category_center():
 
 if __name__ == "__main__":
     # GloVe Model
-    model = gensim.models.KeyedVectors.load_word2vec_format('gensim.glove.twitter.27B.200d.txt', binary=False)
+    model = gensim.models.KeyedVectors.load_word2vec_format('../../../gensim.glove.twitter.27B.200d.txt', binary=False)
     # model.save('model\\glove.twitter.27B.200d')
     get_users_category_center()
