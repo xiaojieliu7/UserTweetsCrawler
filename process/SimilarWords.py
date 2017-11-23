@@ -99,9 +99,11 @@ def get_users_category_center():
                     centerCategory, wlist = get_center_category(annotation["categories"])
                     # print(centerCategory)
                     annotation.setdefault("top_category", centerCategory)
+                    newCategories = []
                     for j in range(len(wlist)):
                         # print(annotation["categories"][j], wlist[j])
-                        annotation["categories"][j].setdefault("score", wlist[j])
+                        newCategories.append({"category": annotation["categories"][j], "score": wlist[j]})
+                    annotation["categories"] = newCategories
                     newAnnotations.append(annotation)
                 tweet["tagme"]["annotations"] = newAnnotations
             userinfo['tweets'][i] = tweet
