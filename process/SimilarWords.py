@@ -44,6 +44,8 @@ def get_center_category(categories):
                     categoryJ = [SnowballStemmer('english').stem(w) for w in
                                  categories[j].replace("Category:", "").lower().split(' ')
                                  if w not in stopwords.words('english')]
+                    if len(categoryI) == 0 or len(categoryJ) == 0:
+                        continue
                     similarityMatrix[i][j] = model.n_similarity(categoryI, categoryJ)
                 except KeyError as e:
                     # word not in vocabulary
