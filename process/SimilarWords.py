@@ -122,6 +122,6 @@ def get_users_category_center():
 
 if __name__ == "__main__":
     # GloVe Model
-    model = gensim.models.KeyedVectors.load_word2vec_format('gensim.glove.twitter.27B.200d.txt', binary=False)
+    model = gensim.models.KeyedVectors.load_word2vec_format('../../../gensim.glove.twitter.27B.200d.txt', binary=False)
     # model.save('model\\glove.twitter.27B.200d')
     get_users_category_center()

@@ -84,8 +84,8 @@
       <file leaf-file-name="SimilarWords.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/process/SimilarWords.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="36" column="42" lean-forward="true" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+            <state relative-caret-position="577">
+              <caret line="124" column="70" lean-forward="false" selection-start-line="124" selection-start-column="70" selection-end-line="124" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -581,7 +581,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511445044772</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="process obama">
+      <created>1511494732331</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1511494732331</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -622,7 +629,8 @@
     <MESSAGE value="tagme: tweet link with wikipedia, no abstract,categroy, rho&gt;0.1" />
     <MESSAGE value="计算类别权重" />
     <MESSAGE value="bug repair" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug repair" />
+    <MESSAGE value="process obama" />
+    <option name="LAST_COMMIT_MESSAGE" value="process obama" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1117,8 +1125,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/process/SimilarWords.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="36" column="42" lean-forward="true" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+        <state relative-caret-position="577">
+          <caret line="124" column="70" lean-forward="false" selection-start-line="124" selection-start-column="70" selection-end-line="124" selection-end-column="70" />
           <folding />
         </state>
       </provider>
