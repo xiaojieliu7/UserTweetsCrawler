@@ -49,7 +49,7 @@ def get_center_category(categories):
                     similarityMatrix[i][j] = model.n_similarity(categoryI, categoryJ)
                 except KeyError as e:
                     # word not in vocabulary
-                    print(e)
+                    # print(e)
                     continue
     mostSimilarIndex = 0
     maxSimilarty = 0
@@ -74,11 +74,11 @@ def get_users_category_center():
     读取数据库中的用户，每个用户的推文，每条推文关联的wiki实体，每个实体对应的wiki类别列表，计算每个类别列表的中心类别
     :return:
     """
-    userList = []
+    userList = ["BarackObama", ]
     client = pymongo.MongoClient('101.132.187.45:27017')
     db = client.get_database('tweets')
-    for user in db.typical.find(projection={"screen_name": True, "_id": False}):
-        userList.append(user["screen_name"])
+    # for user in db.typical.find(projection={"screen_name": True, "_id": False}):
+    #     userList.append(user["screen_name"])
     for screen_name in userList:
         print("process user:\t", screen_name)
         userinfo = db.typical.find_one({"screen_name": screen_name})
@@ -122,6 +122,6 @@ def get_users_category_center():
 
 if __name__ == "__main__":
     # GloVe Model
-    model = gensim.models.KeyedVectors.load_word2vec_format('../../../gensim.glove.twitter.27B.200d.txt', binary=False)
+    model = gensim.models.KeyedVectors.load_word2vec_format('gensim.glove.twitter.27B.200d.txt', binary=False)
     # model.save('model\\glove.twitter.27B.200d')
     get_users_category_center()
